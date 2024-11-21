@@ -1,0 +1,626 @@
+[
+    {
+        "id": 1,
+        "name": "Dead at Last",
+        "price": 18000,
+        "category": "Games",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_e6644075841a4df5a36a0d9ad85e2cff~mv2.webp",
+        "bestSeller": false,
+        "quantity": 10,
+        "recommendation": true,
+        "description": "Dead at Last is an immersive post-apocalyptic adventure where players must survive in a world overrun by mutants. With complex storylines and heart-pounding action, it's a game of survival and strategy.",
+        "comments": [
+            {
+                "user": "John Doe",
+                "comment": "A fantastic game with incredible world-building and a gripping plot. The survival mechanics are top-notch.",
+                "rating": 5
+            },
+            {
+                "user": "Jane Smith",
+                "comment": "Great concept but some parts felt repetitive. Still, a solid game.",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Kira and the Fading Islands",
+        "price": 18000,
+        "category": "Games",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_eabecf3b32dc445bb0fc09c3890a7ba3~mv2.webp",
+        "bestSeller": false,
+        "quantity": 15,
+        "recommendation": false,
+        "description": "Kira and the Fading Islands is a magical adventure game set on floating islands. Solve puzzles, explore ancient ruins, and uncover the mysteries of a disappearing world.",
+        "comments": [
+            {
+                "user": "Alice Cooper",
+                "comment": "A beautiful game with stunning art and a unique storyline. I loved the puzzle-solving aspect.",
+                "rating": 5
+            },
+            {
+                "user": "Mark Twain",
+                "comment": "The story was a bit slow at times, but the game is still enjoyable for puzzle lovers.",
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Ancient Souls",
+        "price": 20000,
+        "category": "Games",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_a082fb07d8344bec8bb61e3958c65401~mv2.webp",
+        "bestSeller": false,
+        "quantity": 12,
+        "recommendation": true,
+        "description": "Ancient Souls is an action-packed RPG set in a world where ancient spirits guide or hinder your path. Experience intense combat, uncover secrets, and become a legend.",
+        "comments": [
+            {
+                "user": "Lara Croft",
+                "comment": "The combat mechanics are amazing, and the world feels so alive. Definitely a must-play!",
+                "rating": 5
+            },
+            {
+                "user": "Nathan Drake",
+                "comment": "It’s a great game, but the controls took some getting used to. Otherwise, excellent gameplay.",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Ice Dome: Exile",
+        "price": 18000,
+        "category": "Games",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_1fced547ddff4698a820b04cbf4e7622~mv2.webp",
+        "bestSeller": false,
+        "quantity": 8,
+        "recommendation": false,
+        "description": "Ice Dome: Exile takes place in a frozen wasteland where players must survive while dealing with hostile wildlife, treacherous environments, and limited resources.",
+        "comments": [
+            {
+                "user": "Emily Black",
+                "comment": "The graphics are stunning, and the atmosphere is haunting. It kept me on the edge of my seat.",
+                "rating": 4
+            },
+            {
+                "user": "Tom Riddle",
+                "comment": "The survival aspect is great, but the difficulty spikes too abruptly. Still, worth playing.",
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Chronosplit",
+        "price": 20000,
+        "category": "Games",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_261f4ef2535f451faedabc197c6e4a71~mv2.webp",
+        "bestSeller": false,
+        "quantity": 6,
+        "recommendation": true,
+        "description": "Chronosplit is a time-manipulation puzzle game where players must navigate complex environments using the power of time. Solve mind-bending puzzles and save the world from collapsing.",
+        "comments": [
+            {
+                "user": "Victor Cruz",
+                "comment": "A brilliant concept with fantastic puzzle mechanics. The time manipulation is unique and fun.",
+                "rating": 5
+            },
+            {
+                "user": "Hannah Lee",
+                "comment": "Challenging but extremely rewarding. The puzzles get very tricky as the game progresses.",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Cyber Kid Infinite",
+        "price": 20000,
+        "category": "Games",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_0fc432ddbaa847358c7d2598829b08e8~mv2.webp",
+        "bestSeller": false,
+        "quantity": 14,
+        "recommendation": false,
+        "description": "Cyber Kid Infinite is a futuristic RPG where players must navigate a high-tech world filled with cybernetic enhancements, criminal syndicates, and intense action sequences.",
+        "comments": [
+            {
+                "user": "Sophie Turner",
+                "comment": "The world-building is impressive, but I felt the storyline lacked depth. Great gameplay, though.",
+                "rating": 3
+            },
+            {
+                "user": "Chris Hemsworth",
+                "comment": "The game has a lot of potential but needs more character development. Combat is smooth and fun.",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Ghost",
+        "price": 13000,
+        "category": "Controllers",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_c43ffddc70424da6bb78612d5a5306fd~mv2.webp",
+        "bestSeller": false,
+        "quantity": 9,
+        "recommendation": true,
+        "description": "The Ghost controller is a high-performance gaming controller designed for precision and comfort. With customizable buttons and an ergonomic design, it's perfect for long gaming sessions.",
+        "comments": [
+            {
+                "user": "David Hasselhoff",
+                "comment": "Perfect controller for FPS games. The design is sleek and feels great in hand.",
+                "rating": 5
+            },
+            {
+                "user": "Paul Rudd",
+                "comment": "I love the responsiveness, but the grip could be a little better.",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Raptor",
+        "price": 13000,
+        "category": "Controllers",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_a288e7752775424cb73f47c163e7421d~mv2.webp",
+        "bestSeller": false,
+        "quantity": 18,
+        "recommendation": false,
+        "description": "Raptor is a next-gen gaming controller featuring adaptive triggers and haptic feedback for an immersive gaming experience. Designed for both comfort and performance.",
+        "comments": [
+            {
+                "user": "Tom Hardy",
+                "comment": "Great features but too heavy for my taste. Still a solid controller.",
+                "rating": 3
+            },
+            {
+                "user": "Emma Stone",
+                "comment": "The adaptive triggers are amazing! Really improves the gameplay.",
+                "rating": 5
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Flint",
+        "price": 15000,
+        "category": "Controllers",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_9af40b3e57c3467d8418902ac14ae314~mv2.webp",
+        "bestSeller": false,
+        "quantity": 20,
+        "recommendation": true,
+        "description": "Flint is a cutting-edge controller with advanced motion-sensing technology and a lightweight design. Perfect for fast-paced games and precision control.",
+        "comments": [
+            {
+                "user": "Scarlett Johansson",
+                "comment": "Lightweight and responsive, the Flint controller is perfect for competitive gamers.",
+                "rating": 5
+            },
+            {
+                "user": "Robert Downey Jr.",
+                "comment": "A great controller, but I wish it had a longer battery life.",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Libra 2.0",
+        "price": 15000,
+        "category": "Controllers",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_32bb941c4019487fb57f45a3abb63ff1~mv2.webp",
+        "bestSeller": false,
+        "quantity": 5,
+        "recommendation": false,
+        "description": "Libra 2.0 is a versatile gaming controller with adjustable triggers and responsive buttons. It's designed for a wide range of gaming genres.",
+        "comments": [
+            {
+                "user": "Ryan Reynolds",
+                "comment": "Very comfortable, but the buttons are a bit too stiff. Still, a good controller for most games.",
+                "rating": 3
+            },
+            {
+                "user": "Gal Gadot",
+                "comment": "Nice overall, but could be improved with a better grip.",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Stealth X",
+        "price": 15000,
+        "category": "Controllers",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_dd0f8aabaa0d46bf9e95335654141be0~mv2.webp",
+        "bestSeller": false,
+        "quantity": 7,
+        "recommendation": true,
+        "description": "Stealth X is a sleek and lightweight gaming controller with customizable buttons and a built-in rechargeable battery. Designed for serious gamers who want precision and comfort.",
+        "comments": [
+            {
+                "user": "Chris Hemsworth",
+                "comment": "Great controller for all types of games. The grip is solid, and I love the customizable buttons.",
+                "rating": 5
+            },
+            {
+                "user": "Scarlett Johansson",
+                "comment": "Comfortable to hold for long gaming sessions, but it could have a bit more responsiveness on the triggers.",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Wave",
+        "price": 15000,
+        "category": "Controllers",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_58812d9bb7ba47638549b64970fe3bbe~mv2.webp",
+        "bestSeller": false,
+        "quantity": 22,
+        "recommendation": false,
+        "description": "Wave is a dynamic controller with advanced vibration feedback and an ergonomic design that adapts to your grip.",
+        "comments": [
+            {
+                "user": "Tom Holland",
+                "comment": "The Wave controller is great for casual gaming, but it's not as durable as I hoped.",
+                "rating": 3
+            },
+            {
+                "user": "Zendaya",
+                "comment": "Nice design, but the vibration feedback doesn't feel as strong as I expected.",
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Gameflow Black",
+        "price": 442000,
+        "category": "Consoles",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_235d9b7973a240feabdd9097b36d88b3~mv2.webp",
+        "bestSeller": false,
+        "quantity": 4,
+        "recommendation": true,
+        "description": "Gameflow Black is a premium gaming console featuring cutting-edge performance, seamless multiplayer integration, and 4K resolution support.",
+        "comments": [
+            {
+                "user": "Robert Downey Jr.",
+                "comment": "The Gameflow Black offers excellent performance for hardcore gamers. Graphics and speed are top-notch.",
+                "rating": 5
+            },
+            {
+                "user": "Chris Pratt",
+                "comment": "A bit expensive, but definitely worth the investment if you are looking for the ultimate gaming experience.",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Playbox XZ Gold Edition",
+        "price": 491000,
+        "category": "Consoles",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_0ad63666dfda498c87e59e0424307682~mv2.webp",
+        "bestSeller": false,
+        "quantity": 3,
+        "recommendation": false,
+        "description": "The Playbox XZ Gold Edition is a limited-edition console with gold-plated accents, featuring exclusive content and enhanced processing power.",
+        "comments": [
+            {
+                "user": "Will Smith",
+                "comment": "Looks amazing, but the price is really steep for what you get.",
+                "rating": 3
+            },
+            {
+                "user": "Dwayne Johnson",
+                "comment": "Great design, but not enough upgrades over the standard Playbox XZ to justify the cost.",
+                "rating": 2
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Veritas VR Set",
+        "price": 310000,
+        "category": "Consoles",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_38b385f4555847a28ea62dc6c7b2e433~mv2.webp",
+        "bestSeller": false,
+        "quantity": 17,
+        "recommendation": true,
+        "description": "Veritas VR Set offers an immersive virtual reality experience with cutting-edge technology, offering full 360-degree motion tracking and realistic visuals.",
+        "comments": [
+            {
+                "user": "Emma Stone",
+                "comment": "Incredible VR experience. The visuals are breathtaking, and the motion tracking is very accurate.",
+                "rating": 5
+            },
+            {
+                "user": "Jake Gyllenhaal",
+                "comment": "Feels like being in the game, but the setup can be a bit complicated.",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Gameflow",
+        "price": 256000,
+        "category": "Consoles",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_20c90d44409145b2af2d3b8e5e14c0d8~mv2.webp",
+        "bestSeller": false,
+        "quantity": 13,
+        "recommendation": false,
+        "description": "Gameflow is a budget-friendly console offering solid performance for casual gamers who don't need the premium features of more expensive consoles.",
+        "comments": [
+            {
+                "user": "Natalie Portman",
+                "comment": "Good value for the price, but the graphics could be better.",
+                "rating": 3
+            },
+            {
+                "user": "Tom Hiddleston",
+                "comment": "Decent console for casual gaming, but it lags a bit when running more demanding games.",
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Playbox XZ",
+        "price": 285000,
+        "category": "Consoles",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_61886226d1dd46588af52472caed4d0e~mv2.webp",
+        "bestSeller": true,
+        "quantity": 23,
+        "recommendation": true,
+        "description": "Playbox XZ is the latest in the Playbox console lineup, featuring faster load times, improved graphics, and enhanced multiplayer options.",
+        "comments": [
+            {
+                "user": "Chris Evans",
+                "comment": "Amazing console! The graphics and speed are phenomenal. Worth every penny.",
+                "rating": 5
+            },
+            {
+                "user": "Mark Ruffalo",
+                "comment": "Great performance, but the storage could be a little bigger for such an expensive console.",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Wave Gen RX",
+        "price": 285000,
+        "category": "Consoles",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_e9de4ca4cb7a4cbc9c9e0098bcf68fa4~mv2.webp",
+        "bestSeller": false,
+        "quantity": 19,
+        "recommendation": false,
+        "description": "Wave Gen RX is a console built for streaming, with built-in support for game streaming platforms and a sleek, minimalist design.",
+        "comments": [
+            {
+                "user": "Robert Pattinson",
+                "comment": "Great for streaming, but not the best choice for hardcore gaming.",
+                "rating": 3
+            },
+            {
+                "user": "Keira Knightley",
+                "comment": "Decent streaming console, but the gaming experience leaves much to be desired.",
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "name": "L503 Headset",
+        "price": 13000,
+        "category": "Accessories",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_c72ff914003b481ea856501f453e2bb3~mv2.webp",
+        "bestSeller": false,
+        "quantity": 16,
+        "recommendation": true,
+        "description": "L503 Headset is a budget-friendly gaming headset that provides decent sound quality and comfort for long gaming sessions.",
+        "comments": [
+            {
+                "user": "Emma Watson",
+                "comment": "Good sound quality for the price, but the build feels a bit cheap.",
+                "rating": 4
+            },
+            {
+                "user": "Tom Hanks",
+                "comment": "Comfortable for long hours of use, but the sound isolation could be better.",
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Echo Headset",
+        "price": 19000,
+        "category": "Accessories",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_9a2583f0a17e48efb075913d90da0dbf~mv2.webp",
+        "bestSeller": false,
+        "quantity": 11,
+        "recommendation": false,
+        "description": "Echo Headset delivers rich sound with high fidelity, featuring noise cancellation and a comfortable over-ear design.",
+        "comments": [
+            {
+                "user": "Angelina Jolie",
+                "comment": "The sound quality is amazing, but the headset is a bit bulky.",
+                "rating": 4
+            },
+            {
+                "user": "Brad Pitt",
+                "comment": "Comfortable for short sessions, but it starts feeling heavy after extended use.",
+                "rating": 3
+            }
+        ]
+    },    
+    {
+        "id": 21,
+        "name": "Impact Gaming Chair",
+        "price": 78000,
+        "category": "Accessories",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_5f84ce55a94f43e5a61445ef199f37e6~mv2.webp",
+        "bestSeller": false,
+        "quantity": 5,
+        "recommendation": true,
+        "description": "The Impact Gaming Chair provides maximum comfort for long gaming sessions, featuring ergonomic design, adjustable armrests, and lumbar support.",
+        "comments": [
+            {
+                "user": "Ryan Reynolds",
+                "comment": "This chair is incredibly comfortable, and the lumbar support is perfect for long hours of gaming.",
+                "rating": 5
+            },
+            {
+                "user": "Hugh Jackman",
+                "comment": "Very comfortable, but I wish it had more adjustability for the armrests.",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Mach Gaming Chair",
+        "price": 57000,
+        "category": "Accessories",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_85410586580e46ce94659e34046a48c8~mv2.webp",
+        "bestSeller": true,
+        "quantity": 4,
+        "recommendation": false,
+        "description": "Mach Gaming Chair combines style and comfort with a sleek design, memory foam padding, and a durable metal frame for stability.",
+        "comments": [
+            {
+                "user": "Chris Pratt",
+                "comment": "The Mach chair looks awesome, and it's very sturdy. However, it could be more comfortable for extended sessions.",
+                "rating": 4
+            },
+            {
+                "user": "Zoe Saldana",
+                "comment": "I love the design, but the seat padding isn't thick enough for long hours of gaming.",
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "name": "X-2 Wireless Mouse",
+        "price": 12000,
+        "category": "Accessories",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_0067919b3086427cad03a54e61452958~mv2.webp",
+        "bestSeller": true,
+        "quantity": 4,
+        "recommendation": false,
+        "description": "The X-2 Wireless Mouse offers precision and high responsiveness with customizable DPI settings and ergonomic design for comfortable use.",
+        "comments": [
+            {
+                "user": "Chris Hemsworth",
+                "comment": "Great responsiveness and easy to use, but I would have preferred more customizable buttons.",
+                "rating": 4
+            },
+            {
+                "user": "Scarlett Johansson",
+                "comment": "Nice mouse for gaming, but it could use more grip on the sides for better control.",
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "name": "Blaze Wireless Mouse",
+        "price": 12000,
+        "category": "Accessories",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_cd96af123e594be889223811cd602f60~mv2.webp",
+        "bestSeller": true,
+        "quantity": 4,
+        "recommendation": false,
+        "description": "Blaze Wireless Mouse features ultra-low latency and a long battery life, with a comfortable grip that is perfect for gamers who need fast reaction times.",
+        "comments": [
+            {
+                "user": "Tom Hiddleston",
+                "comment": "Perfect for fast-paced games, but it could be a bit lighter.",
+                "rating": 4
+            },
+            {
+                "user": "Natalie Portman",
+                "comment": "I like the mouse, but the battery doesn't last as long as expected.",
+                "rating": 3
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "name": "Spartan Mechanical Keyboard",
+        "price": 20000,
+        "category": "Accessories",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_7c11d47692f04c1f92a024ad095274ae~mv2.webp",
+        "bestSeller": true,
+        "quantity": 4,
+        "recommendation": false,
+        "description": "The Spartan Mechanical Keyboard features fast response times, customizable RGB backlighting, and durable mechanical switches for a premium typing experience.",
+        "comments": [
+            {
+                "user": "Tom Holland",
+                "comment": "Great keyboard with responsive keys and beautiful RGB lighting.",
+                "rating": 5
+            },
+            {
+                "user": "Zendaya",
+                "comment": "I like it overall, but the keys could be a bit quieter when typing.",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "name": "CO-21 Mechanical Keyboard",
+        "price": 25000,
+        "category": "Accessories",
+        "inStock": true,
+        "image": "/assets/productsIMG/c837a6_641d6a957b634fbd857bc3f06e1feaab~mv2.webp",
+        "bestSeller": true,
+        "quantity": 4,
+        "recommendation": false,
+        "description": "CO-21 Mechanical Keyboard offers tactile feedback with premium switches and RGB lighting effects for enhanced gaming and typing performance.",
+        "comments": [
+            {
+                "user": "Ryan Gosling",
+                "comment": "This keyboard is perfect for gaming, but the keys could be a bit less noisy.",
+                "rating": 4
+            },
+            {
+                "user": "Eva Green",
+                "comment": "I love the RGB lighting, but the keyboard is a little too heavy for my liking.",
+                "rating": 3
+            }
+        ]
+    }
+]

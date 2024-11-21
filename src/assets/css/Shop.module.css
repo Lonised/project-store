@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+
+}
+
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}  
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+
+.buttonActive {
+    width: 150px;
+    height: 40px;
+    border-radius: 100px;
+    border: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #8858ed;
+    transition: all 0.3s ease;
+}
+
+.buttonActive:hover {
+    color: white;
+    background-color: #8858ed;
+    border: 2px solid white;
+}
+
+.buttonPassive {
+    width: 250px;
+    height: 40px;
+    border-radius: 100px;
+    border: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: #8858ed;
+    transition: all 0.3s ease;
+}
+
+.buttonPassive:hover {
+    color: #8858ed;
+    background-color: white;
+}
+
+
+.wrapper-shop {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.shop {
+    width: 90%;
+    height: 100%;
+    margin-top: 100px;
+
+    
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    gap: 70px;
+    color: white;
+
+}
+.shopForm {
+    width: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 40px;
+}
+.home-link {
+    color: white;
+    text-decoration: none;
+}
+.shopForm h3 { 
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.line-shop-form { 
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.502);
+}
+
+.shopFormList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.shopFormList a {
+    text-decoration: none;
+    color: white;
+}
+
+.shopFormList a:hover {
+    text-decoration: underline;
+}
+
+.active-link {
+    text-decoration: solid; 
+    font-weight: bold; 
+}
+
+.formFilterRange {
+    width: 200px;
+    
+}
+.shopFormFilter {
+    width: 200px;
+    height: 50px;
+
+    margin-top: -20px;
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+}
+.formFilterDop {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.formFilterDop a {
+    color: white;
+    text-decoration: none;
+}
+.shopFormFilter p {
+    font-size: 15px;
+    font-weight: 100;
+}
+
+
+
+
+
+.rangeContainer {
+    position: relative;
+    width: 200px;
+    height: 2px;
+}
+
+.formFilterRange {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 1px;
+    background: white;
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.formFilterRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.sliderTrack {
+    position: absolute;
+    height: 2px;
+    background-color: #d3d3d3;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 3px;
+}
+
+.shopList {
+    width: 100%;
+    height: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.shopList h1 {
+    font-size: 70px;
+    margin-bottom: 50px;
+}
+.shopListSort {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.shopListSort a {
+    text-decoration: none;
+    color: white;
+}
+
+.shopListProducts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 20px;
+}
+.shopListDown {
+    margin-top: 50px;
+    margin-left: -25px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.custom-select {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 15px;
+
+}.custom-select:hover {
+    background-color: transparent;
+    border: 0;
+}
+.custom-select:active {
+    background-color: transparent;
+    border: 0;
+}
