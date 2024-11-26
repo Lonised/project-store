@@ -28,6 +28,9 @@ import Pinterest from '../assets/img/pinterest.png'
 import Twitter from '../assets/img/twitter.png'
 import Facebook_2 from '../assets/img/facebook_2.png'
 
+import Background_1 from '../assets/img/back.jpg'
+import Background_2 from '../assets/img/back2.jpg'
+
 
 
 import Consoles from '../assets/img/c837a6_20c90d44409145b2af2d3b8e5e14c0d8~mv2.webp'
@@ -72,4 +75,6 @@ export const images = {
     Pinterest,
     Twitter,
     Facebook_2,
+    Background_1,
+    Background_2,
 }

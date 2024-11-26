@@ -232,7 +232,7 @@ export default function Home() {
 
             <section className={styles['wrapper-background']}>
                 <div className={styles['background']}>
-                    <img src="#" alt="#" />
+                    <img src={images['Background_2']}/>
                 </div>
             </section>
 

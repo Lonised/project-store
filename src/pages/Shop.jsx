@@ -146,7 +146,6 @@ export default function Shop() {
                                     />
                                 ))}
                             </div>
-
                             <div className={styles['shopListDown']}>           
                                 {visibleProducts < sortedProducts.length && (
                                     <button className={styles['buttonPassive']} onClick={loadMore}>
@@ -154,6 +153,8 @@ export default function Shop() {
                                     </button>
                                 )}
                             </div>
+
+
                         </div>
                     </div>
                 </section>
