@@ -25,6 +25,7 @@ main {
     font-weight: bold;
     color: #8858ed;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .buttonActive:hover {
@@ -43,6 +44,7 @@ main {
     color: white;
     background-color: #8858ed;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .buttonPassive:hover {
@@ -205,7 +207,6 @@ main {
     text-align: justify;
 }
 .productDop {
-    width: 500px;
 
     display: flex;
     justify-content: space-between;
@@ -319,4 +320,43 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 5px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .wrapper-product {
+        height: 1100px;
+    }
+    .productLeft p{
+        width: 300px;
+    }
+    .productLeft img{
+        width: 300px;
+        height: auto;
+    }
+    .productInfo {
+        width: 300px;
+        text-align: justify;
+    }
+    .productButton {
+        justify-content: left;
+    }
+    .productList {
+        width: 450px;
+    }
+    .wrapper-list {
+        height: 500px;
+    }
+    .list-products {
+        gap: 40px;
+    }
+    .list-product-form {
+        width: 250px;
+    }
+    .list-product-form img {
+        width: 250px;
+        height: 250px;
+        gap: 10px;
+    }
+
+
 }

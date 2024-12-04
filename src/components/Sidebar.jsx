@@ -1,17 +1,59 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeItem, decreaseItemQuantity, addItem } from '../redux/cartSlice';
 import styles from '../assets/css/Sidebar.module.css';
-import { images } from '../components/images.js';
+import { Link } from 'react-router-dom';
 
-export default function Sidebar({ onClose, isOpen }) {
-  // Состояние для количества товаров
-  const [quantity, setQuantity] = useState(1); 
+export default function Sidebar({ onClose, isOpen, onOpen }) {
+  const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
+  const cartItems = useSelector(state => state.cart.items);
+  const [totalAmount, setTotalAmount] = useState(0);
+  const [animate, setAnimate] = useState(false);
 
-  // Обработчик изменения количества
+  // Сохранение корзины в localStorage при изменении cartItems
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify({ items: cartItems }));
+    
+    // Вычисление новой суммы
+    const newTotalAmount = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    setTotalAmount(newTotalAmount);
+    
+    // Включаем анимацию при изменении суммы
+    setAnimate(true);
+
+    // Сбрасываем анимацию через 600ms, чтобы она могла сработать снова
+    const timeout = setTimeout(() => {
+      setAnimate(false);
+    }, 600); // Длительность анимации
+
+    return () => clearTimeout(timeout); // Очистка таймера при размонтировании
+  }, [cartItems]);
+
   const handleQuantityChange = (event) => {
     const value = parseInt(event.target.value, 10);
     if (!isNaN(value) && value >= 1 && value <= 10) {
       setQuantity(value);
     }
+  };
+
+  const handleAddToCart = (product) => {
+    dispatch(addItem({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      quantity: quantity,
+      image: product.image
+    }));
+    onOpen(); // Открыть сайдбар при добавлении товара
+  };
+
+  const handleDecrease = (id) => {
+    dispatch(decreaseItemQuantity(id));
+  };
+
+  const handleRemove = (id) => {
+    dispatch(removeItem(id));
   };
 
   return (
@@ -21,45 +63,32 @@ export default function Sidebar({ onClose, isOpen }) {
         <h1>Cart</h1>
       </div>
       <div className={styles['sidebarMiddle']}>
-        <div className={styles['sidebarMiddleForm']}>
-          <img src={images.Games} alt="Product" />
-          <div className={styles['formCol']}>
-            <p>Kira and the Fading Islands</p>
-            <p>18000 ₸</p>
-            <div className={styles['productInput']}>
-              <p>Quantity of goods :</p>
-              <input
-                type="number"
-                value={quantity} // Привязка значения к состоянию
-                onChange={handleQuantityChange} // Обработчик изменения
-                min="1"
-                max="10" // Задаем ограничение на количество
-              />
+        {cartItems.length > 0 ? (
+          cartItems.map(item => (
+            <div key={item.id} className={styles['sidebarMiddleForm']}>
+              <img src={item.image} alt="Product" />
+              <div className={styles['formCol']}>
+                <p>{item.name}</p>
+                <p>{item.price} ₸</p>
+                <p>Quantity: {item.quantity}</p>
+              </div>
+              <div className={styles['sidebarMiddleButton']}>
+                <button onClick={() => handleDecrease(item.id)}>-</button>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className={styles['sidebarMiddleForm']}>
-          <img src={images.Games} alt="Product" />
-          <div className={styles['formCol']}>
-            <p>Kira and the Fading Islands</p>
-            <p>18000 ₸</p>
-            <div className={styles['productInput']}>
-              <p>Quantity of goods :</p>
-              <input
-                type="number"
-                value={quantity} // Привязка значения к состоянию
-                onChange={handleQuantityChange} // Обработчик изменения
-                min="1"
-                max="10" // Задаем ограничение на количество
-              />
-            </div>
-          </div>
-        </div>
-        
+          ))
+        ) : (
+          <p>Your cart is empty</p>
+        )}
+      </div>
+      <div className={`${styles['totalAmount']} ${animate ? styles.animate : ''}`}>
+        <p>Total: {totalAmount} ₸</p>
       </div>
       <div className={styles['sidebarDown']}>
         <div className={styles['sidebar-line']}></div>
-        <button className={styles['buttonSidebar']}>View Cart</button>
+        <Link to="/shop/cart">
+          <button className={styles['buttonSidebar']}>View Cart</button>
+        </Link>
       </div>
     </div>
   );

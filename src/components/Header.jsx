@@ -39,20 +39,20 @@ export default function Header() {
           </div>
           <div className={styles.headerRight}>
             <a
-              href="#"
+              href="/shop"
               className={styles['headerRight-href']}
               onMouseEnter={() => setHovering(true)}
               onMouseLeave={() => setHovering(false)}
             >
               Products
             </a>
-            <a href="#" className={styles['headerRight-href']}>
-              On Sale
+            <a href="/shop" className={styles['headerRight-href']}>
+              Games
             </a>
-            <a href="#" className={styles['headerRight-href']}>
+            <a href="/shop" className={styles['headerRight-href']}>
               Contact Us
             </a>
-            <a href="#" className={styles['headerRight-href']}>
+            <a href="/account" className={styles['headerRight-href']}>
               <img src={images.profileImg} alt="Profile" />
             </a>
             <a
@@ -74,10 +74,10 @@ export default function Header() {
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
           >
-            <a href="/shop?category=BestSellers">Best Sellers</a>
-            <a href="/shop?category=Games">Games</a>
-            <a href="/shop?category=Consoles">Consoles</a>
-            <a href="/shop?category=Accessories">Accessories</a>
+            <a href="/shop/best%20sellers">Best Sellers</a>
+            <a href="/shop/games">Games</a>
+            <a href="/shop/consoles">Consoles</a>
+            <a href="/shop/accessories">Accessories</a>
           </div>
         )}
       </header>

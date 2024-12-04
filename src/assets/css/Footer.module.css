@@ -106,3 +106,46 @@
     height: auto;
 } 
 
+
+  /* Адаптив для планшетов (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer {
+        width: 95%;
+        gap: 100px;
+        justify-content: center;
+    }
+    .footerUp {
+        width: 90%;
+
+    }
+    .footerUpList {
+        font-size: 15px;
+        gap: 10px;
+    }
+    .footerDown {
+        width: 90%;
+    }
+    .footerDownFlex {
+        display: flex;
+        gap: 10px;
+    }
+    .footerDownLeft img {
+        width: 30px;
+        height: auto;
+    }
+    .footerDownRight {
+        gap: 10px;
+    }
+    .footerDownSocial {
+        display: flex;
+        justify-content: right;
+        gap: 20px;
+    }
+    .footerDownSocial img {
+        width: 20px;
+        height: auto;
+    } 
+
+    
+
+}

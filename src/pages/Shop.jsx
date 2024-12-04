@@ -1,30 +1,44 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import styles from '../assets/css/Shop.module.css';
 import Card from '../components/Card';
 import products from '../assets/data/products.json';
 import sortProducts from '../utils/sortProducts';
-import { Link } from 'react-router-dom';
 
 export default function Shop() {
-    const { category } = useParams(); // Получаем категорию из URL, если она есть
+    const { category } = useParams();
     const [minValue, setMinValue] = useState(10000);
     const [maxValue, setMaxValue] = useState(1000000);
     const [visibleProducts, setVisibleProducts] = useState(9);
     const [sortOption, setSortOption] = useState("recommended");
-    const [filteredProducts, setFilteredProducts] = useState(products); // Состояние для фильтрации продуктов
-    const [isTransitioning, setIsTransitioning] = useState(false);
+    const [filteredProducts, setFilteredProducts] = useState([]);
+    const [productsToRender, setProductsToRender] = useState([]);
+    const [isTransitioningOut, setIsTransitioningOut] = useState(false);
 
     useEffect(() => {
-        // Фильтрация продуктов при изменении категории или цены
-        const newFilteredProducts = products.filter(product =>
-            (!category || category === 'All Products' || product.category === category) &&
-            (category !== 'Best Sellers' || product.bestSeller) &&
-            product.price >= minValue && product.price <= maxValue
-        );
-        setFilteredProducts(newFilteredProducts);
-        setVisibleProducts(9); // Сброс отображаемых продуктов при смене категории
-    }, [category, minValue, maxValue]); // Перезапускать при изменении категории, минимальной и максимальной цены
+        const filtered = products.filter(product => {
+            const matchesCategory =
+                !category ||
+                category.toLowerCase() === 'all products' ||
+                (category.toLowerCase() === 'best sellers' && product.bestSeller) ||
+                product.category.toLowerCase() === category.toLowerCase();
+
+            const matchesPrice = product.price >= minValue && product.price <= maxValue;
+
+            return matchesCategory && matchesPrice;
+        });
+
+        // Запускаем анимацию исчезновения
+        setIsTransitioningOut(true);
+
+        // Ждем завершения анимации
+        setTimeout(() => {
+            setFilteredProducts(filtered);
+            setProductsToRender(filtered);
+            setVisibleProducts(9);
+            setIsTransitioningOut(false);
+        }, 300); // Время анимации (должно совпадать с CSS)
+    }, [category, minValue, maxValue]);
 
     const handleMinChange = (event) => {
         const value = Math.min(Number(event.target.value), maxValue - 1);
@@ -36,20 +50,7 @@ export default function Shop() {
         setMaxValue(value);
     };
 
-    const handleCategoryChange = (newCategory) => {
-        setIsTransitioning(true);
-        setTimeout(() => {
-            setFilteredProducts(
-                products.filter(product =>
-                    newCategory === 'All Products' || product.category === newCategory
-                )
-            );
-            setIsTransitioning(false);
-            setVisibleProducts(9); // Сброс отображаемых продуктов при изменении категории
-        }, 500);
-    };
-
-    const sortedProducts = sortProducts(filteredProducts, sortOption);
+    const sortedProducts = sortProducts(productsToRender, sortOption);
 
     const loadMore = () => {
         setVisibleProducts(prevVisible => prevVisible + 6);
@@ -68,15 +69,14 @@ export default function Shop() {
                             <h3>Browse by</h3>
                             <div className={styles['line-shop-form']}></div>
                             <div className={styles['shopFormList']}>
-                                {['All Products', 'Accessories', 'Best Sellers', 'Consoles', 'Controllers', 'Games', 'On Sale'].map(cat => (
-                                    <a
+                                {['All Products', 'Accessories', 'Best Sellers', 'Consoles', 'Controllers', 'Games'].map(cat => (
+                                    <Link
                                         key={cat}
-                                        href="#"
-                                        onClick={() => handleCategoryChange(cat)}
+                                        to={`/shop/${cat === 'All Products' ? '' : cat.toLowerCase()}`}
                                         className={category === cat ? styles['active-link'] : ''}
                                     >
                                         {cat}
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                             <h3>Filter by</h3>
@@ -131,19 +131,20 @@ export default function Shop() {
                                     <option value="nameZA" className={styles['custom-option']}>Name Z-A</option>
                                 </select>
                             </div>
-                            <div className={`${styles['shopListProducts']} ${isTransitioning ? styles['fade-out'] : styles['fade-in']}`}>
+                            <div className={`${styles['shopListProducts']} ${isTransitioningOut ? styles['fade-out'] : styles['fade-in']}`}>
                                 {sortedProducts.slice(0, visibleProducts).map(product => (
-                                    <Card 
-                                        key={product.id}
-                                        id={product.id}
-                                        name={product.name}
-                                        price={product.price}
-                                        category={product.category}
-                                        inStock={product.inStock}
-                                        image={product.image}
-                                        bestSeller={product.bestSeller}
-                                        quantity={product.quantity}
-                                    />
+                                    <Link to={`/info/${product.id}`} key={product.id}>
+                                        <Card
+                                            id={product.id}
+                                            name={product.name}
+                                            price={product.price}
+                                            category={product.category}
+                                            inStock={product.inStock}
+                                            image={product.image}
+                                            bestSeller={product.bestSeller}
+                                            quantity={product.quantity}
+                                        />
+                                    </Link>
                                 ))}
                             </div>
                             <div className={styles['shopListDown']}>           
@@ -153,8 +154,6 @@ export default function Shop() {
                                     </button>
                                 )}
                             </div>
-
-
                         </div>
                     </div>
                 </section>
@@ -163,3 +162,5 @@ export default function Shop() {
         </div>
     );
 }
+
+

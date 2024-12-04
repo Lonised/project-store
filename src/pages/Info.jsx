@@ -1,67 +1,84 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { addItem as addToCartAction } from '../redux/cartSlice'; // Импортируем экшен для добавления товара
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import styles from '../assets/css/Info.module.css';
 import data from '../assets/data/products.json';
 import { images } from '../components/images';
 
-export default function Info() {
+export default function Info({ onOpen }) { // Получаем пропс onOpen для открытия сайдбара
     const { id } = useParams(); // Получаем id из URL
+    const dispatch = useDispatch(); // Хук для работы с Redux
     const [product, setProduct] = useState(null);
     const [quantity, setQuantity] = useState(1); // Устанавливаем начальное значение 1
     const [loading, setLoading] = useState(true); // Состояние для загрузки
     const [animateKey, setAnimateKey] = useState(id); // Ключ для анимации
+    const cart = useSelector((state) => state.cart.items); // Получаем товары из корзины через Redux
 
     const [isProductInfoVisible, setIsProductInfoVisible] = useState(false);
     const [isReturnPolicyVisible, setIsReturnPolicyVisible] = useState(false);
     const [isShippingInfoVisible, setIsShippingInfoVisible] = useState(false);
 
     useEffect(() => {
-      setLoading(true); // Устанавливаем состояние загрузки при изменении id
-      const foundProduct = data.find(item => item.id === parseInt(id));
-      if (foundProduct) {
+        setLoading(true); // Устанавливаем состояние загрузки при изменении id
+        const foundProduct = data.find(item => item.id === parseInt(id));
+        if (foundProduct) {
         setProduct(foundProduct);
-      } else {
+        } else {
         setProduct(null); // Если продукта нет, сбрасываем данные
-      }
-      setQuantity(1); // Сбрасываем количество на 1
-      setAnimateKey(id); // Обновляем ключ анимации
-      setLoading(false); // Завершаем загрузку
+        }
+        setQuantity(1); // Сбрасываем количество на 1
+        setAnimateKey(id); // Обновляем ключ анимации
+        setLoading(false); // Завершаем загрузку
     }, [id]);
-  
+
     // Функция для вычисления средней оценки
     const calculateAverageRating = (comments) => {
-      if (!comments || comments.length === 0) return 0;
-      const totalRating = comments.reduce((acc, comment) => acc + comment.rating, 0);
-      return (totalRating / comments.length).toFixed(1); // Округляем до одного знака после запятой
+        if (!comments || comments.length === 0) return 0;
+        const totalRating = comments.reduce((acc, comment) => acc + comment.rating, 0);
+        return (totalRating / comments.length).toFixed(1); // Округляем до одного знака после запятой
     };
-  
+
+    // Функция для добавления товара в корзину через Redux
+    const addToCart = () => {
+        const newCartItem = {
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          quantity: quantity,
+          image: product.image
+        };
+        dispatch(addToCartAction(newCartItem)); // Добавляем товар в корзину через dispatch
+    };
+      
+
     // Если загрузка, показываем сообщение
     if (loading) {
-      return <p>Loading...</p>;
+        return <p>Loading...</p>;
     }
-  
+
     // Если продукта нет, показываем сообщение
     if (!product) {
-      return <p>Product not found!</p>;
+        return <p>Product not found!</p>;
     }
-  
+
     // Функция для обработки изменения количества
     const handleQuantityChange = (e) => {
-      const value = Math.max(1, Math.min(product.quantity, e.target.value)); // Ограничиваем количество от 1 до максимума из JSON
-      setQuantity(value);
+        const value = Math.max(1, Math.min(product.quantity, e.target.value)); // Ограничиваем количество от 1 до максимума из JSON
+        setQuantity(value);
     };
-  
+
     // Находим индекс текущего продукта в массиве
     const currentProductIndex = data.findIndex(item => item.id === product.id);
-  
+
     // Находим id предыдущего и следующего продукта
     const prevProductId = data[currentProductIndex - 1]?.id; // ID предыдущего продукта
     const nextProductId = data[currentProductIndex + 1]?.id; // ID следующего продукта
-  
+
     // Определяем категорию продукта
     const productCategory = product.category || 'All Products';
-  
+
     // Вычисляем среднюю оценку и количество комментариев
     const averageRating = calculateAverageRating(product.comments);
     const reviewsCount = product.comments.length;
@@ -71,7 +88,6 @@ export default function Info() {
     const toggleShippingInfo = () => setIsShippingInfoVisible((prev) => !prev);
 
     const getToggleSymbol = (isVisible) => (isVisible ? '-' : '+');
-
 
     return (
     <div>
@@ -135,7 +151,7 @@ export default function Info() {
                     </div>
                     <br />
                     <div className={styles['productButton']}>
-                        <button className={styles['buttonPassive']}>Add to Cart</button>
+                        <button onClick={addToCart} className={styles['buttonPassive']}>Add to Cart</button>
                         <button className={styles['buttonActive']}>Buy Now</button>
                     </div>
 

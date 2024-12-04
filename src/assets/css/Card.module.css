@@ -106,3 +106,17 @@
     margin-bottom: 15px;
 }
 
+
+
+@media (min-width: 768px) and (max-width: 1024px) {  
+    .ExampleFormProducts {
+        width: 320px;
+        padding: 0;
+        gap: 0px;
+    }  
+    .productImageContainer {
+        width: 300px;
+        height: 300px;
+    }
+    
+}

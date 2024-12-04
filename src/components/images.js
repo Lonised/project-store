@@ -8,6 +8,9 @@ import left from '../assets/img/left.png'
 import right from '../assets/img/right.png'
 import carto from '../assets/img/carto.png'
 import rating from '../assets/img/rating.png'
+import wallpaper from '../assets/img/wallpaper.jpg'
+import wallpaper2 from '../assets/img/878378.jpg'
+import books from '../assets/img/books.avif'
 
 import Visa from '../assets/img/Visa.webp'
 import MasterCard from '../assets/img/MasterCard.webp'
@@ -40,6 +43,9 @@ import Controllers from '../assets/img/c837a6_58812d9bb7ba47638549b64970fe3bbe~m
 import Games from '../assets/img/c837a6_eabecf3b32dc445bb0fc09c3890a7ba3~mv2.webp'
 import Games_1 from '../assets/img/c837a6_e6644075841a4df5a36a0d9ad85e2cff~mv2.webp'
 import Games_2 from '../assets/img/c837a6_a082fb07d8344bec8bb61e3958c65401~mv2.webp' 
+import Games_3 from '../assets/img/c837a6_0fc432ddbaa847358c7d2598829b08e8~mv2.webp'
+
+
 
 
 export const images = {
@@ -70,6 +76,7 @@ export const images = {
     Games,
     Games_1,
     Games_2,
+    Games_3,
     rating,
     Watsapp,
     Pinterest,
@@ -77,4 +84,7 @@ export const images = {
     Facebook_2,
     Background_1,
     Background_2,
+    wallpaper,
+    wallpaper2,
+    books
 }

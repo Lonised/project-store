@@ -246,3 +246,38 @@
     background-color: transparent;
     border: 0;
 }
+
+
+@media (min-width: 768px) and (max-width: 1024px) {    
+    .shop {
+        width: 95%;
+        gap: 30px;
+    }
+    .shopForm {
+        gap: 20px;
+    }
+    .shopForm h3 { 
+        font-size: 25px;
+        font-weight: 100;
+    }
+    .shopFormList {
+        gap: 12px;
+        font-weight: 200;
+    }
+    .shopFormFilter {
+        margin-top: 10px;
+        gap: 20px;
+    }
+    .shopListSort {
+        width: 100%;
+    }
+    .shopList h1{
+        font-size: 50px;
+    }
+    .shopListProducts {
+        margin-bottom: 50px;
+        justify-content: center;
+        gap: 50px;
+    }
+
+}
